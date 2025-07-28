@@ -1,0 +1,123 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fefefe;
+  color: #333;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#div1 {
+  padding: 4% 2%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.listdiv {
+  background-color: brown;
+  padding: 10px 20px;
+  border-radius: 9px;
+  color: white;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.listdiv:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+}
+
+.Heading {
+  text-align: center;
+  color: #351904;
+  margin-bottom: 2rem;
+}
+
+#div2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem 3rem;
+  justify-items: center;
+}
+
+/* .members {
+  background-color: #fff8ee;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  max-width: 280px;
+  transition: transform 0.3s ease;
+} */
+
+.members{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 250px;
+    border: solid bisque;
+    border-width: thin;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.members:hover {
+  transform: translateY(-5px);
+}
+/* 
+.membinfo {
+  height: 200px;
+  background-image: url("mentorimages.jpeg");
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid #ddd;
+} */
+ .membinfo{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border: solid gray;
+    border-width: thin;
+    border-radius: 50%;
+    margin-top: 20px;
+    /* background-color: aliceblue; */
+    background-image: url(mentorimages.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* .membtext {
+  padding: 1rem;
+  background-color: #fff8ee;
+  color: #7b2f00;
+  font-weight: 600;
+  text-align: center;
+} */
+
+.membtext{
+    position: absolute;
+    display: flex;
+    height: 50px;
+    width: 250px;
+    background-color: rgb(241,233,193);
+    margin-top: 130px;    
+    color: darkred;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+
+#RDsection{
+  display: "none";
+}
+
+#profilesection{
+  display: "none";
+}
