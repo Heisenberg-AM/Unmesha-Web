@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1e9c1; 
+            padding: 20px;
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #351904; 
+            font-size: 2.5rem;
+            
+        }
+        
+
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            width: 100%;
+            background-color: #edbe0c; 
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            min-width: calc(100% / 3);
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #b7b0a5; 
+        }
+
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: #351904; 
+            color: #f1e9c1; 
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        .slider-button:hover {
+            background-color: #edbe0c;
+            color: #351904; 
+        }
+
+        .slider-button.prev {
+            left: 20px;
+        }
+
+        .slider-button.next {
+            right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                min-width: 100%;
+            }
+            
+            .slider-button {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <h1>Photo Gallery</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        
+        <div class="slider-container">
+            <div class="slider-track">
+                <div class="slide">
+                    <img src="image1.jpg"alt="image1">
+                </div>
+                <div class="slide">
+                    <img src="image 3.jpg" alt="image2">
+                </div>
+                <div class="slide">
+                    <img src="image4.jpg" alt="image3">
+                </div>
+                <div class="slide">
+                    <img src="image2.jpg" alt="image4">
+                </div>
+                <div class="slide">
+                    <img src="image7.jpg" alt="image5">
+                </div>
+                <div class="slide">
+                    <img src="image6.jpg" alt="image6">
+                </div>
+            </div>
+            
+            <button class="slider-button prev"><</button>
+            <button class="slider-button next">></button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.querySelector('.slider-track');
+            const slides = document.querySelectorAll('.slide');
+            const nextButton = document.querySelector('.slider-button.next');
+            const prevButton = document.querySelector('.slider-button.prev');
+            
+            let currentIndex = 0;
+            const slidesToShow = 3;
+            const slideCount = slides.length;
+            
+            function updateSlider() {
+                const slideWidth = 100 / slidesToShow;
+                track.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+            }
+            
+            nextButton.addEventListener('click', () => {
+                if (currentIndex < slideCount - slidesToShow) {
+                    currentIndex += 1;
+                } else {
+                    currentIndex = 0; 
+                }
+                updateSlider();
+            });
+            
+            prevButton.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex -= 1;
+                } else {
+                    currentIndex = Math.max(0, slideCount - slidesToShow); 
+                }
+                updateSlider();
+            });
+            
+           
+            updateSlider();
+        });
+    </script>
+</body>
+</html>

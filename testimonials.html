@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Testimonials</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: rgb(255, 255, 255); 
+            color: #351904; 
+            padding: 40px 20px;
+        }
+
+        .testimonial-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #351904; 
+            position: relative;
+            display: inline-block;
+        }
+
+
+        .testimonial-slider {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+            background-color: rgb(241, 233, 193); 
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            min-height: 350px;
+        }
+
+        .testimonial {
+            display: none;
+            animation: fadeIn 1s;
+        }
+
+        .testimonial.active {
+            display: block;
+        }
+
+        .testimonial-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .testimonial-content {
+                flex-direction: row;
+                text-align: left;
+            }
+        }
+
+        .testimonial-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid #8B3A00; 
+        }
+
+        @media (min-width: 768px) {
+            .testimonial-img {
+                margin-right: 30px;
+                margin-bottom: 0;
+            }
+        }
+
+        .testimonial-text {
+            flex: 1;
+        }
+
+        .testimonial-name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #8B3A00; 
+        }
+
+        .testimonial-role {
+            font-style: italic;
+            color: #7f8c8d; 
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .testimonial-quote {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .nav-btn {
+            background: #E08E00; 
+            color: white; 
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: #8B3A00; 
+        }
+
+        .nav-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+           
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #bdc3c7; 
+            margin: 0 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .indicator.active {
+            background: #E08E00; 
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="testimonial-container">
+        <h1>TESTIMONIALS</h1>
+        
+        <div class="testimonial-slider">
+            <div class="testimonial active">
+                <div class="testimonial-content">
+                    <img src="tarun.webp" alt="Tarun Reddy" class="testimonial-img">
+                    <div class="testimonial-text">
+                        <h3 class="testimonial-name">Tarun Reddy</h3>
+                        <span class="testimonial-role">TechCorp</span>
+                        <p class="testimonial-quote">
+                            "Working with this team has been an absolute game-changer . Their attention to detail and creative approach helped in my studies and placement. I highly recommend their services to anyone looking for professional and effective solutions."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <img src="aswathy.webp" alt="Aswathy S" class="testimonial-img">
+                    <div class="testimonial-text">
+                        <h3 class="testimonial-name">Aswathy S</h3>
+                        <span class="testimonial-role">TechCorp</span>
+                        <p class="testimonial-quote">
+                            " This team exceeded all our expectations. Their innovative solutions and responsive support have been invaluable during my critical growth phase. Truly exceptional service!"
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <img src="nandhana.webp" alt="Nandhana" class="testimonial-img">
+                    <div class="testimonial-text">
+                        <h3 class="testimonial-name">Nandhana</h3>
+                        <span class="testimonial-role">TechCorp</span>
+                        <p class="testimonial-quote">
+                            "The quality of work and professionalism demonstrated by this team is outstanding. They took our vague ideas and transformed them into a beautiful, functional product that our users love. Their collaborative approach made the entire process smooth and enjoyable."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <img src="shreya.webp" alt="Sreya S Nair" class="testimonial-img">
+                    <div class="testimonial-text">
+                        <h3 class="testimonial-name">Sreya S Nair</h3>
+                        <span class="testimonial-role">TechCorp</span>
+                        <p class="testimonial-quote">
+                            "Their team became an extension of our own, always going above and beyond."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="testimonial-nav">
+            <button class="nav-btn prev-btn"><</button>
+            <div class="nav-indicators">
+                <span class="indicator active" data-index="0"></span>
+                <span class="indicator" data-index="1"></span>
+                <span class="indicator" data-index="2"></span>
+                <span class="indicator" data-index="3"></span>
+            </div>
+            <button class="nav-btn next-btn">></button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const testimonials = document.querySelectorAll('.testimonial');
+            const indicators = document.querySelectorAll('.indicator');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            let currentIndex = 0;
+            let intervalId;
+            const slideInterval = 5000; 
+            
+           
+            function showTestimonial(index) {
+                testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+                indicators.forEach(indicator => indicator.classList.remove('active'));
+                
+                testimonials[index].classList.add('active');
+                indicators[index].classList.add('active');
+                currentIndex = index;
+                
+                
+                resetInterval();
+            }
+            
+            
+            function nextTestimonial() {
+                currentIndex = (currentIndex + 1) % testimonials.length;
+                showTestimonial(currentIndex);
+            }
+            
+            
+            function prevTestimonial() {
+                currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+                showTestimonial(currentIndex);
+            }
+            
+           
+            function startInterval() {
+                intervalId = setInterval(nextTestimonial, slideInterval);
+            }
+            
+            
+            function resetInterval() {
+                clearInterval(intervalId);
+                startInterval();
+            }
+            
+           
+            nextBtn.addEventListener('click', nextTestimonial);
+            prevBtn.addEventListener('click', prevTestimonial);
+            
+            
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    showTestimonial(index);
+                });
+            });
+            
+            
+            startInterval();
+            
+           
+            const slider = document.querySelector('.testimonial-slider');
+            slider.addEventListener('mouseenter', () => clearInterval(intervalId));
+            slider.addEventListener('mouseleave', startInterval);
+        });
+    </script>
+</body>
+</html>
