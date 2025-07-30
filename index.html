@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes nav-ani{
+    0%{
+        transform: translateX(-100%); 
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+#nav-adj{
+    float: left;
+    justify-content: center;
+    transition:1 ease-in-out;
+    animation:  2.5s ease-in-out 0s 1 nav-ani;
+    position: fixed;
+}
+
+#nav-adj ul {
+    margin-left: -10%;
+   
+    list-style-type: none;
+  /* width: 70px; */
+  background-color: beige;
+  border-radius: 10px 70px 70px 10px;
+  padding: 20px 0px 20px 0px;
+ border: 2px solid #3E2723;
+  opacity: 0.6;
+
+}
+#nav-adj li a {
+  display: block;
+  color: #000; 
+  padding: 8px 5px;
+  text-decoration: none;
+  transition: 0.9 ease;
+}
+#nav-adj li a img {
+    transition: 0.3s;
+}
+#nav-adj li a img:hover {
+    translate: 5px;
+    transform: scale(1.2);
+    opacity: 1;
+
+}
+#nav-adj li a:hover {
+  color: white;
+}
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body style="background-image: url('taj.png');">
+    <div id="nav-adj">
+        <ul>
+          <li><a href="" title="Home"><span><img src="https://www.svgrepo.com/show/526560/home.svg" width="40vw"></span></a></li>
+          <li><a href="" title="Goals"><img src="https://www.svgrepo.com/show/485920/target.svg" width="40vw"></a></li>
+          <li><a href="" title="Members"><img src="https://www.svgrepo.com/show/509193/people.svg" width="40vw"></a></li>
+          <li><a href="" title="Alumini" style="border-radius: 40px 0px;"><img src="https://www.svgrepo.com/show/447986/education.svg" width="40vw"></a></li>
+          <li><a href="" title="Projects" style="border-radius: 40px 0px;"><img src="https://www.svgrepo.com/show/473036/books.svg" width="40vw"></a></li>
+          <li><a href="" title="Info"><span><img  src="https://www.svgrepo.com/show/450991/information.svg" width="40vw"></span></a></li>
+        </ul>
+      </div>
+</body>
+</html>
