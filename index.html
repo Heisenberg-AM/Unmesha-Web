@@ -3,9 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Unmesha</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        @keyframes nav-ani{
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    /* background-color: #351904; */
+    background-color: #8B3A00;
+    /* background-color: #E08E00; */
+    /* background-color: rgb(241, 233, 193); */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background: #8B3A00;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.content {
+    background-color: #f5f5f5;
+    padding: 30px;
+    text-align: center;
+}
+
+.info {
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.card {
+    background: rgb(241, 233, 193);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.card a {
+    color: #833A00;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 2;
+}
+
+footer {
+    background-color: #1a1a2e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+}
+
+.logo{
+    width: 10%;
+    height: 10%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+}
+
+.logo img{
+    width: 100%;
+    height: 90.67px;
+}
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 468px) {
+    header, footer {
+        text-align: center;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    .logo img{
+        width: 0;
+        height: 0;
+    }
+}
+
+@keyframes nav-ani{
     0%{
         transform: translateX(-100%); 
     }
@@ -51,15 +180,45 @@
 
 }
 #nav-adj li a:hover {
+  /* background-color: #12a8e34a; */
+  /* border-radius: 2px; */
   color: white;
+  
+ 
+  /* background-image: url('https://www.svgrepo.com/show/508300/home.svg');
+  width:20px;
+  height:20px; */
 }
-
     </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body style="background-image: url('taj.png');">
+<body>
+    <header>
+        <span>
+        <div class="logo">
+            <img src="logo.avif" alt="Logo">
+        </div>
+        </span>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Areas</a></li>
+                <li><a href="#">Tools</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="info">
+        <div class="info-box">
+            <h2>AI4Bharat</h2>
+            <p>AI4Bharat is a research initiative focused on advancing AI technology for Indian languages.</p>
+        </div>
+        <div class="info-photo">
+            <h2>Unmeshan</h2>
+            <p>Unmeshan is a research initiative focused on advancing AI technology for Indian languages.</p>
+            <!-- <img src="https://www.svgrepo.com/show/526560/home.svg" alt="Unmeshan Logo"> -->
+        </div>
+    </div>
     <div id="nav-adj">
         <ul>
           <li><a href="" title="Home"><span><img src="https://www.svgrepo.com/show/526560/home.svg" width="40vw"></span></a></li>
@@ -68,7 +227,51 @@
           <li><a href="" title="Alumini" style="border-radius: 40px 0px;"><img src="https://www.svgrepo.com/show/447986/education.svg" width="40vw"></a></li>
           <li><a href="" title="Projects" style="border-radius: 40px 0px;"><img src="https://www.svgrepo.com/show/473036/books.svg" width="40vw"></a></li>
           <li><a href="" title="Info"><span><img  src="https://www.svgrepo.com/show/450991/information.svg" width="40vw"></span></a></li>
+          <!-- <
+           li><a href="" title="Friends"><span><img  src="https://www.svgrepo.com/show/406888/people-hugging.svg" width="40vw"></span></a></li> -->
+          <!-- <li><a href="" title="Messages" style="border-radius: 40px 0px;"><img src="https://www.svgrepo.com/show/522602/messages.svg" width="40vw"></a></li>
+          <li><a href="" title="mail" style="border-radius: 40px 0px;"><img src="https://www.svgrepo.com/show/533210/mail-open.svg" width="40vw"></a></li> -->
         </ul>
       </div>
+    
+
+    <section class="content">
+        <h2>Focus Areas</h2>
+        <div class="cards">
+            <div class="card"><h3>Text 1</h3>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                <br><a href="card1">Learn more</a>
+            </div>
+            <div class="card"><h3>Text 2</h3>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                <br><a href="card2">Learn more</a>
+            </div>
+            <div class="card"><h3>Text 3</h3>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                <br><a href="card3">Learn more</a>
+            </div>
+            <div class="card"><h3>Text 4</h3>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                <br><a href="card4">Learn more</a>
+            </div>
+            <div class="card"><h3>Text 5</h3>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                <br><a href="card5">Learn more</a>
+            </div>
+            <div class="card"><h3>Text 6</h3>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                <br><a href="card6">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero">
+        <h2>Advancing AI Technology for Indian Languages</h2>
+        <p>Unmeshan is dedicated to AI research, focusing on translation, speech recognition, and more.</p>
+    </section>
+
+    <footer>
+        <p>©️ 2025 AI Initiative. All rights reserved.</p>
+    </footer>
 </body>
 </html>
