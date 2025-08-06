@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unmesha</title>
+    <title>AI4Bharat Style Layout</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-body {
-    font-family: Arial, sans-serif;
+    <style>
+   
+    body {
+    /* font-family: Arial, sans-serif; */
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 399;
+    font-style: normal;
+    font-size: large;
 }
+
+
 
 header {
     /* background-color: #351904; */
@@ -22,7 +33,6 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
-    height: 50px;
 }
 
 nav ul {
@@ -54,10 +64,11 @@ nav ul li a {
 }
 
 .info {
-    padding: 20px;
+    padding: 9%;
     border-radius: 10px;
-    margin: 20px 0;
-    
+    margin: 10% 5%;
+    position:absolute;
+    color: white;
 }
 
 .cards {
@@ -111,6 +122,8 @@ footer {
     height: 90.67px;
 }
 
+
+
 @media (max-width: 768px) {
     .cards {
         flex-direction: column;
@@ -146,6 +159,7 @@ footer {
 
 #nav-adj{
     float: left;
+    top: 20%;
     justify-content: center;
     transition:1 ease-in-out;
     animation:  2.5s ease-in-out 0s 1 nav-ani;
@@ -190,52 +204,84 @@ footer {
   width:20px;
   height:20px; */
 }
+
+@media (max-width: 600px) {
+    #nav-adj {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        animation: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    #nav-adj ul {
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        border: 2px solid #3E2723;
+        background-color: beige;
+        opacity: 0.9;
+    }
+
+    #nav-adj ul li {
+        margin: 0;
+    }
+
+    #nav-adj li a {
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #nav-adj li a img {
+        width: 7vw;
+    }
+}
     </style>
 </head>
-<body>
-    <header>
-        <span>
-        <div class="logo">
-            <img src="logo.avif" alt="Logo">
-        </div>
-        </span>
-<!--         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Areas</a></li>
-                <li><a href="#">Tools</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Careers</a></li>
-            </ul>
-        </nav> -->
-    </header>
-    <div class="info">
-        <div class="info-box">
-            <h2>AI4Bharat</h2>
-            <p>AI4Bharat is a research initiative focused on advancing AI technology for Indian languages.</p>
-        </div>
-        <div class="info-photo">
-            <h2>Unmeshan</h2>
-            <p>Unmeshan is a research initiative focused on advancing AI technology for Indian languages.</p>
-            <!-- <img src="https://www.svgrepo.com/show/526560/home.svg" alt="Unmeshan Logo"> -->
-        </div>
-    </div>
-    <div id="nav-adj">
+<body style="background-color: white; height: 100%;width: 100%;">
+     <div id="nav-adj">
         <ul>
           <li><a href="" title="Home"><span><img src="https://www.svgrepo.com/show/526560/home.svg" width="40vw"></span></a></li>
           <li><a href="" title="Goals"><img src="https://www.svgrepo.com/show/485920/target.svg" width="40vw"></a></li>
-          <li><a href="people.html" title="Members"><img src="https://www.svgrepo.com/show/509193/people.svg" width="40vw"></a></li>
-          <li><a href="photogallery.html" title="Alumini" style="border-radius: 40px 0px;"><img src="https://www.svgrepo.com/show/447986/education.svg" width="40vw"></a></li>
-          <li><a href="testimonials.html" title="Projects" style="border-radius: 40px 0px;"><img src="https://www.svgrepo.com/show/473036/books.svg" width="40vw"></a></li>
+          <li><a href="" title="Members"><img src="https://www.svgrepo.com/show/509193/people.svg" width="40vw"></a></li>
+          <li><a href="" title="Alumini" style="border-radius: 40px 0px;"><img src="https://www.svgrepo.com/show/447986/education.svg" width="40vw"></a></li>
+          <li><a href="" title="Projects" style="border-radius: 40px 0px;"><img src="https://www.svgrepo.com/show/473036/books.svg" width="40vw"></a></li>
           <li><a href="" title="Info"><span><img  src="https://www.svgrepo.com/show/450991/information.svg" width="40vw"></span></a></li>
-          <!-- <
-           li><a href="" title="Friends"><span><img  src="https://www.svgrepo.com/show/406888/people-hugging.svg" width="40vw"></span></a></li> -->
-          <!-- <li><a href="" title="Messages" style="border-radius: 40px 0px;"><img src="https://www.svgrepo.com/show/522602/messages.svg" width="40vw"></a></li>
-          <li><a href="" title="mail" style="border-radius: 40px 0px;"><img src="https://www.svgrepo.com/show/533210/mail-open.svg" width="40vw"></a></li> -->
+                     <li><a href="" title="Info"><span><img  src="https://www.svgrepo.com/show/450991/information.svg" width="40vw"></span></a></li>
+ 
         </ul>
       </div>
+    <div >
+       
+        <div class="info">
+            <div class="info-box">
+                <h2>IKS</h2>
+                <p>Scope:
+IKS encompasses a vast body of knowledge encompassing diverse areas like mathematics, astronomy, medicine (Ayurveda), philosophy (Vedanta, Nyaya), linguistics, music, architecture, and more. </p>
+            </div>
+            <div class="info-box">
+                <h2>Unmesha</h2>
+                <p>Unmesha is an research initiative focused on advancing AI technology for Indian languages.</p>
+            </div>
+        </div>
+         <img src="taj.png" alt="Taj" height="100%" width="100%" style="opacity: 1;">
+    </div>
+   
     
-
+     <div>
     <section class="content">
         <h2>Focus Areas</h2>
         <div class="cards">
@@ -265,14 +311,10 @@ footer {
             </div>
         </div>
     </section>
-
+    </div>
     <section class="hero">
         <h2>Advancing AI Technology for Indian Languages</h2>
         <p>Unmeshan is dedicated to AI research, focusing on translation, speech recognition, and more.</p>
     </section>
-
-    <footer>
-        <p>©️ 2025 AI Initiative. All rights reserved.</p>
-    </footer>
 </body>
 </html>
